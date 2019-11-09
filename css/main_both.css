@@ -1,0 +1,219 @@
+body,ul,li,p {
+    padding: 0;
+    margin: 0;
+    font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+ul,li {
+    list-style: none;
+}
+
+/* 头部 */
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    height: 70px;
+    width: 100%;
+    min-width: 1000px;  
+    background: #fff;
+    opacity: 1;
+    box-shadow: rgba(69, 71, 77, 0.2) 0px 1px 10px 0px;
+    color: rgb(51, 51, 51);
+}
+header::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.head-nav {
+    height: 70px;
+    width: 1000px;
+    margin: 0 auto;
+}
+.head-nav .logo {
+    float: left;
+    height: 70px;
+    width: 100px;
+    background: url(../img/logo.jpg) no-repeat 50% 50%;
+    background-size: 110%;
+}
+.head-nav .nav {
+    float: left;
+    margin-left: 260px;
+}
+.nav li {
+    float: left;
+    line-height: 67px;
+    height: 65px;
+    width: 90px;
+    text-align: center;
+}
+.nav #bom {
+    /* transition: all 0.6s; */
+    border-bottom: 5px solid #00b6fe;
+}
+.nav #bom a {
+    color: #00b6fe;
+}
+.nav li a {
+    font-size: 18px;
+}
+.nav li a:hover {
+    color: #00b6fe;
+    transition:all 0.4s;
+}
+.head-nav .user {
+    float: right;
+    width: 300px;
+    height: 70px;
+}
+.user li {
+    line-height: 70px;
+}
+.user div {
+    height: 50px;
+    width: 50px;
+    line-height: 70px;
+    margin-top: 10px;
+    border-radius: 50%;
+    background: url(../img/user2.png) no-repeat;
+    background-size: 100%;
+    float: left;
+}
+.user span {
+    float: left;
+    margin-left: 5px;
+    font-size: 14px;
+    color: #999;
+}
+.user span:hover {
+    color: #00b6fe;
+}
+.user #shu {
+    font-size: 16px;
+    margin: 0 20px;
+}
+.user i {
+    display: block;
+    float: left; 
+    color: #00b6fe;
+}
+
+/* 主体部分 */
+.main-box {
+    background: #fafafa;
+}
+.main-box::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+.main-box .bg {
+    width: 100%;
+    height: 400px;
+    min-width: 1000px;
+    background: url(../img/main_bg.jpg) no-repeat 0 50%;
+    background-size: 100%;
+}
+.main-box .main {
+    width: 1000px;
+    height: 1000px;
+    margin: -280px auto 0;
+    background: #f8f8fa;
+    box-shadow: 0 12px 12px 0 rgba(7,13,28,0.04);
+    border-radius: 5px;
+}
+
+/* 底部部分 */
+footer {
+    width: 100%;
+    min-width: 1000px;
+    background: url(../img/main_footer.png) no-repeat;
+    background-size: 100%;
+    margin-top: 100px;
+}
+footer .container {
+    width: 1000px;
+    min-width: 1000px;
+    margin: 0 auto;
+}
+footer .footer-nav {
+    width: 1000px;
+    height: 200px;
+    padding-top: 50px;
+    border-bottom: 1px solid #a6a6a6;
+}
+footer .nav-left {
+    float: left;
+    box-sizing: border-box;
+    height: 170px;
+    width: 650px;
+    border-right: 1px solid #a6a6a6;
+}
+footer .nav-left .first li { 
+    float: left;
+    color: #fff;
+    font-size: 18px;
+    margin-right: 156px;
+}
+footer .nav-left li {
+    padding-bottom: 10px;
+}
+footer .nav-left a {
+    color: #a6a6a6;
+    transition:color 0.3s;
+    font-size: 16px;
+}
+footer .nav-left a:hover {
+    color: #fff;
+}
+footer .nav-left .second {
+    float: left;
+    margin-top: 20px;
+}
+footer .nav-left .third {
+    float: left;
+    margin: 20px 0 0 90px;
+}
+footer .nav-left .fourth {
+    float: left;
+    margin: 20px 0 0 162px;
+}
+footer .nav-right {
+    float: left;
+    height: 200px;
+    width: 350px;
+    box-sizing: border-box;
+}
+footer .nav-right .tel {
+    display: block;
+    border: 1px solid #a6a6a6;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    width: 190px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+footer .nav-right .tel:hover {
+    background: #aa9279;
+    color: #fff;
+    transition:all 0.6s;
+}
+footer .nav-right .tel i {
+    font-size: 22px;
+}
+footer .nav-right ul li {
+    padding-left: 95px;
+    color: #a6a6a6;
+    font-size: 18px;
+}
+footer .footer-add {
+    padding: 10px 0 50px 0;
+    color: #a6a6a6;
+}

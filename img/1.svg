@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 768" style="enable-background:new 0 0 1024 768;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#00B6FE;stroke-width:20;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#00B6FE;}
+	.st3{font-family:'MicrosoftYaHeiLight';}
+	.st4{font-size:60px;}
+</style>
+<path class="st0" d="M492.5,492C419.9,492,361,433.1,361,360.5S419.9,229,492.5,229"/>
+<g>
+	<rect x="317" y="314" class="st1" width="175" height="20"/>
+	<polygon class="st2" points="492,314 317,314 317,334 492,334 492,314 	"/>
+</g>
+<g>
+	<rect x="318" y="383" class="st1" width="174" height="20"/>
+	<polygon class="st2" points="492,383 318,383 318,403 492,403 492,383 	"/>
+</g>
+<text transform="matrix(1 0 0 1 313 594)" class="st1 st3 st4">小账本</text>
+</svg>
