@@ -89,8 +89,12 @@
 
                     <!-- 将数据库中的流入流出数据显示到页面上 -->
                     <?php echo
-                        "<tr class='red'><td><i class='iconfont icon-ico-jrcwsf'></i> 支出</td><td>￥$t_e</td><td>￥$w_e</td><td>￥$m_e</td><td>￥$y_e</td></tr>
-                        <tr class='green'><td><i class='iconfont icon-ico-jrcwss'></i> 收入</td><td>￥$t_i</td><td>￥$w_i</td><td>￥$m_i</td><td>￥$y_i</td></tr>";
+                        "<tr class='red'>
+                            <td><i class='iconfont icon-ico-jrcwsf'></i> 支出</td><td>￥$t_e</td><td>￥$w_e</td><td>￥$m_e</td><td>￥$y_e</td>
+                        </tr>
+                        <tr class='green'>
+                            <td><i class='iconfont icon-ico-jrcwss'></i> 收入</td><td>￥$t_i</td><td>￥$w_i</td><td>￥$m_i</td><td>￥$y_i</td>
+                        </tr>";
                     ?>
                 </table>
             </div>
@@ -216,7 +220,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="footer-add">蜀ICP备19010669号-1 | Copyright © 2019 小账本</div>
+                <div class="footer-add">蜀ICP备19010669号 | Copyright © 2019 小账本</div>
             </div>
         </footer>
     </div>

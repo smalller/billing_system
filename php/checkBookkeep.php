@@ -30,7 +30,7 @@
         } else {
             //将输入的值插入到数据库中
             $pre_stmt = $mysqli->prepare("insert into expend (username,expend,sort,account,date,PS) values(?,?,?,?,?,?)");  //准备sql语句，外部接收到的值先以?替代
-            $pre_stmt->bind_param("ssssss",$username,$expend,$expendSort,$expendAccount,$expendDate,$expendPS); //给上面的语句进行绑定参数，有几个参数，前面就有几个s 
+            $pre_stmt->bind_param("ssssss",$username,intval($expend),$expendSort,$expendAccount,$expendDate,$expendPS); //给上面的语句进行绑定参数，有几个参数，前面就有几个s 
 
             if($pre_stmt->execute()) {
                 $err   = "保存成功";
@@ -79,7 +79,7 @@
         } else {
             //将输入的值插入到数据库中
             $pre_stmt1 = $mysqli->prepare("insert into income (username,income,sort,account,date,PS) values(?,?,?,?,?,?)");  //准备sql语句，外部接收到的值先以?替代
-            $pre_stmt1->bind_param("ssssss",$username,$income,$incomeSort,$incomeAccount,$incomeDate,$incomePS); //给上面的语句进行绑定参数，有几个参数，前面就有几个s 
+            $pre_stmt1->bind_param("ssssss",$username,intval($income),$incomeSort,$incomeAccount,$incomeDate,$incomePS); //给上面的语句进行绑定参数，有几个参数，前面就有几个s 
 
             if($pre_stmt1->execute()) {
                 $err1   = "保存成功";

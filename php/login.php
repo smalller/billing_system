@@ -49,7 +49,7 @@
 
     <!-- 备案信息 -->
     <footer>
-        蜀ICP备19010669号-1 | Copyright © 2019 小账本
+        蜀ICP备19010669号 | Copyright © 2019 小账本
     </footer>
     
 </body>

@@ -5,13 +5,13 @@
     $num2     = 1;   //收入序号
     $userName = $_SESSION["username"];  //获取当前用户
 
-    
+
     //查询支出相关数据
-    $sql1    = "select expend,sort,account,PS,date from expend where username = '$userName';";
+    $sql1    = "select id,expend,sort,account,PS,date from expend where username = '$userName';";
     $result1 = $mysqli->query($sql1);
 
     // 查询收入相关数据
-    $sql2    = "select income,sort,account,PS,date from income where username = '$userName';";
+    $sql2    = "select id,income,sort,account,PS,date from income where username = '$userName';";
     $result2 = $mysqli->query($sql2);
 
     //查询支出金额总和
@@ -19,14 +19,15 @@
     $result3    = $mysqli->query($sql3);
     $row3       = mysqli_fetch_assoc($result3);
     $sum_expend = $row3["round(sum(expend),2)"];
+    mysqli_free_result($row3);  //清空结果集缓存
 
     //查询收入金额总和
     $sql4       = "select round(sum(income),2) from income where username = '$userName';";
     $result4    = $mysqli->query($sql4);
     $row4       = mysqli_fetch_assoc($result4);
     $sum_income = $row4["round(sum(income),2)"];
+    mysqli_free_result($row4);  //清空结果集缓存
+
 
     $balance = $sum_income - $sum_expend;   //剩余余额
-
-
 ?>

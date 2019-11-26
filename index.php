@@ -140,7 +140,7 @@
     footer {
       position: absolute;
       bottom: 0;
-      color:#fff;
+      color: #fff;
       height: 40px;
       width: 100%;
       min-width: 1226px;
@@ -161,14 +161,6 @@
     <a class="slide" href="#">
       <span class="animate down" style="background-image: url(img/index_3.png)"></span>
     </a>
-    <!-- <a class="slide" title="Bike Basket | 2016" href="#">
-        <span class="animate out" style="background-image: url(img/index_1.png)"></span>
-        <div class="static-content"><h1 class="title">Bike Basket</h1></div>
-      </a>
-      <a class="slide" title="MIDI Controller | 2018" href="#">
-        <span class="animate right" style="background-image: url(img/index_2.png)"></span>
-        <div class="static-content"><h1 class="title">MIDI Controller</h1></div>
-      </a> -->
   </div>
   <div class="wrapper">
     <div class="word"></div>
@@ -185,7 +177,7 @@
     </div>
   </div>
   <footer>
-    蜀ICP备19010669号-1 | Copyright © 2019 小账本
+    蜀ICP备19010669号 | Copyright © 2019 小账本
   </footer>
 
   <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>

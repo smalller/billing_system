@@ -8,7 +8,6 @@
 
     //当点击登录时执行以下操作
     if(isset($_POST["login"])) {
-
         //验证用户数输入的数据是否有效
         if(strlen($username) < 1){
             $err = "请输入用户名";
@@ -23,9 +22,10 @@
 
          //当输入的值都不为空时
         if(!empty($username) && !empty($password)) {
-
-            //查询用户名和密码
-            //sql防御操作(将输入的值与验证的值进行隔离，安全)
+            /**
+             * 查询用户名和密码
+             * sql防御操作(将输入的值与验证的值进行隔离，安全)
+             */          
             $pre_stmt = $mysqli->prepare("select * from user where username = ? and password = ?");  //准备sql语句，外部接收到的值先以?替代
             $pre_stmt->bind_param("ss",$username,$password); //给上面的语句进行绑定参数，有几个参数，前面就有几个s 
             $pre_stmt->execute();   //执行sql语句

@@ -1,7 +1,6 @@
 <?php
-include "sessionLogin.php";
-include "checkAccount.php";
-// include "outputExce_expend.php";
+    include "sessionLogin.php";
+    include "checkAccount.php";
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +13,7 @@ include "checkAccount.php";
     <link rel="stylesheet" href="../css/main_both.css">
     <link rel="stylesheet" href="../css/account.css">
     <link rel="shortcut icon" href="../img/logo.ico">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_1311816_cp9keq8n8wj.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1311816_m57e5qcro3j.css">
 </head>
 
 <body>
@@ -57,7 +56,7 @@ include "checkAccount.php";
         <div class="bg"></div>
         <div class="main" id="main">
             <!-- 上边部分 -->
-            <h2>账户详情</h2>
+            <h2>账单详情</h2>
             <div class="top-box">
             <ul>
                     <li>
@@ -86,29 +85,34 @@ include "checkAccount.php";
                         <th>账户</th>
                         <th>备注</th>
                         <th>时间</th>
+                        <th>操作</th>
                     </tr>
 
                     <!-- 将数据库中的支出数据遍历到页面上 -->
                     <?php while ($row1 = mysqli_fetch_assoc($result1)) { ?>
                         <?php
-                            // $expend = 0.00;
-                            // $sort = '无';
-                            // $account = '无';
-                            // $PS = '无';
-                            // $date = '无';
-
                             $expend = $row1["expend"];
                             $sort = $row1["sort"];
                             $account = $row1["account"];
-                            $PS = $row1["PS"];
+                            $PS = mb_substr($row1["PS"],0,20,'utf-8');  //截取字符集，只显示20个字符
                             $date = $row1["date"];
-                            ?>
-                        <?php echo "<tr><td>$num</td><td>{$expend}元</td><td>$sort</td><td>$account</td><td>$PS</td><td>$date</td></tr>";
+                            $del = $row1["id"];                          
+                        ?>
+                        <?php echo "<tr>
+                                        <td>$num</td>
+                                        <td>{$expend}元</td>
+                                        <td>$sort</td>
+                                        <td>$account</td>
+                                        <td title = '{$row1['PS']}'>$PS</td>
+                                        <td>$date</td>
+                                        <td><a href='delete.php?id1=$del'><i class='iconfont icon-shanchu' title='删除'></i></a></td>
+                                    </tr>";
                             $num++;
-                            ?>
+                            mysqli_free_result($row1);  //清空结果集缓存
+                        ?>
                     <?php } ?>
                 </table>
-                <a href="outputExce_expend.php"><i class="iconfont icon-daochuzhangdan"></i> 导出账单</a>
+                <a href="outputExce_expend.php" id='out'><i class="iconfont icon-daochuzhangdan"></i> 导出账单</a>
             </div>
 
             <!-- 收入表格部分 -->
@@ -122,30 +126,34 @@ include "checkAccount.php";
                         <th>账户</th>
                         <th>备注</th>
                         <th>时间</th>
+                        <th>操作</th>
                     </tr>
 
                     <!-- 将数据库中的收入数据遍历到页面上 -->
                     <?php while ($row2 = mysqli_fetch_assoc($result2)) { ?>
                         <?php                      
-                            // $income = '0.00';
-                            // $sort2 = '无';
-                            // $account2 = '无';
-                            // $PS2 = '无';
-                            // $date2 = '无';
-                            // $i = '0.00';
-
                             $income = $row2["income"];
                             $sort2 = $row2["sort"];
                             $account2 = $row2["account"];
-                            $PS2 = $row2["PS"];
+                            $PS2 = mb_substr($row2["PS"],0,20,'utf-8');   //截取字符集，只显示20个字符
                             $date2 = $row2["date"];
+                            $del2 = $row2["id"];
                         ?>
-                        <?php echo "<tr><td>$num2</td><td>{$income}元</td><td>$sort2</td><td>$account2</td><td>$PS2</td><td>$date2</td></tr>";
+                        <?php echo "<tr>
+                                        <td>$num2</td>
+                                        <td>{$income}元</td>
+                                        <td>$sort2</td>
+                                        <td>$account2</td>
+                                        <td title = '{$row2['PS']}'>$PS2</td>
+                                        <td>$date2</td>
+                                        <td><a href='delete.php?id2=$del2'><i class='iconfont icon-shanchu' title='删除'></i></a></td>
+                                    </tr>";
                             $num2++;
+                            mysqli_free_result($row2);  //清空结果集缓存
                         ?>
                     <?php } ?>
                 </table>
-                <a href="outputExce_income.php"><i class="iconfont icon-daochuzhangdan"></i> 导出账单</a>
+                <a href="outputExce_income.php" id='out'><i class="iconfont icon-daochuzhangdan"></i> 导出账单</a>
             </div>
 
         </div>
@@ -184,7 +192,7 @@ include "checkAccount.php";
                         </ul>
                     </div>
                 </div>
-                <div class="footer-add">蜀ICP备19010669号-1 | Copyright © 2019 小账本</div>
+                <div class="footer-add">蜀ICP备19010669号 | Copyright © 2019 小账本</div>
             </div>
         </footer>
     </div>

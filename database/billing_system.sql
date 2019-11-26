@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : tencent_cloud
-Source Server Version : 50726
-Source Host           : 129.28.125.151:3306
-Source Database       : GP
+Source Server         : localhost_3306
+Source Server Version : 50505
+Source Host           : localhost:3306
+Source Database       : billing_system
 
 Target Server Type    : MYSQL
-Target Server Version : 50726
+Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2019-11-07 21:37:38
+Date: 2019-11-26 17:05:44
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,7 +28,7 @@ CREATE TABLE `expend` (
   `date` varchar(20) CHARACTER SET utf8 DEFAULT NULL COMMENT '支出时间',
   `time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=215 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of expend
@@ -48,7 +48,7 @@ CREATE TABLE `income` (
   `date` varchar(20) CHARACTER SET utf8 DEFAULT NULL COMMENT '收入时间',
   `time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=190 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of income
@@ -73,7 +73,7 @@ CREATE TABLE `user` (
   `year_income` varchar(30) CHARACTER SET utf8 NOT NULL,
   `time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=178 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of user
